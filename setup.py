@@ -64,10 +64,10 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', '--build', '.'] + build_args, cwd=self.build_temp)
 	
         # Copy missing dependencies
-        site_dir = "/usr/local/lib/python2.7/site-packages"
-        missing_packages = ["iexmodule.la", "iexmodule.so", "imathmodule.la", "imathmodule.so", "imathnumpymodule.la", "imathnumpymodule.so"]
-        for package in missing_packages:
-            shutil.copyfile(os.path.join(site_dir, package), os.path.join(extdir, package))
+        # site_dir = "/usr/local/lib/python2.7/site-packages"
+        # missing_packages = ["iexmodule.la", "iexmodule.so", "imathmodule.la", "imathmodule.so", "imathnumpymodule.la", "imathnumpymodule.so"]
+        # for package in missing_packages:
+        #     shutil.copyfile(os.path.join(site_dir, package), os.path.join(extdir, package))
 setup(
     name='alembic',
     version='1.7.16',
